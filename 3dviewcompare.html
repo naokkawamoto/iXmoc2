@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Facility TOKYO 3D VIEW</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div include-html="header.html"></div>
+
+    <!-- Include Header -->
+    <div include-html="header_projectmenu.html"></div>
+    <!-- Include Header -->
+    <div include-html="header_progress.html"></div>
+
+        <!-- 3D Viewer -->
+        <div class="container-fluid">
+            <div class="row">
+                <main id="main-content" class="col content">
+                    <div class="viewer position-relative d-flex justify-content-center align-items-center">
+                        <img src="images/3dcompare.png" alt="3D Viewer" class="img-fluid" style="width: 80%; height: auto;">
+                        <div class="overlay-text position-absolute text-center">
+                            <div class="main-text fw-bold" style="font-size: 48px; color: red;">ONLY VIEWER</div>
+                            <div class="sub-text" style="font-size: 24px; color: red;">User can't edit this 3D view</div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="button" class="btn btn-secondary" onclick="window.location.href='3dview.html'">BACK</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div include-html="footer.html"></div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>

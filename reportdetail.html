@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Detail</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div include-html="header.html"></div>
+
+    <!-- Include Header -->
+    <div include-html="header_projectmenu.html"></div>
+    <!-- Include Header -->
+    <div include-html="header_progress.html"></div>
+
+    <!-- Outer Card -->
+    <div class="container">
+        <div class="card mt-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h4 class="card-title mb-0">Project: Project Facility TOKYO</h4>
+                <span class="bi bi-printer printer-icon"></span>
+            </div>
+            <div class="card-body">
+                
+                <!-- Reporting Comment Section -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">Reporting Comment</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Reported By: <span class="fw-bold">Chris Wilson (SE)</span><br>
+                            Today's report indicates that 10 new issues were identified, but none of them are significant or critical. While the current progress stands at 40%, the project remains on track, and there are no major concerns that would jeopardize the timeline. The team is confident that all tasks will be completed as scheduled by December 31st. Continuous monitoring and proactive issue resolution are in place to ensure that any new challenges are addressed promptly. With the current pace and diligent efforts, we expect to meet all project milestones without delay, achieving our goals as planned.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Report Summary Section -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">Report Summary</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Report ID</th>
+                                        <th>Report Date</th>
+                                        <th>Reported By</th>
+                                        <th>Facility</th>
+                                        <th>Location</th>
+                                        <th>Issues</th>
+                                        <th>Status</th>
+                                        <th>Progress</th>
+                                        <th>Completion</th>
+                                        <th>Classify</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2024-08-10</td>
+                                        <td>Chris Wilson (SE)</td>
+                                        <td>TOKYO</td>
+                                        <td>1st Floor</td>
+                                        <td>32</td>
+                                        <td><span class="badge bg-success">On Schedule</span></td>
+                                        <td>40%</td>
+                                        <td>40%</td>
+                                        <td>
+                                            <span class="badge bg-primary">New: 5</span>
+                                            <span class="badge bg-warning text-dark">In Review: 3</span>
+                                            <span class="badge bg-info text-dark">Fixing: 7</span>
+                                            <span class="badge bg-secondary">Verify: 4</span>
+                                            <span class="badge bg-success">Fixed: 3</span>
+                                        </td>
+                                    </tr>
+                                </tbody>                        
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Report Info Section -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">Issue List</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>NAME</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Assigned To</th>
+                                        <th>Due Date</th>
+                                        <th>Update By</th>
+                                        <th>Update Date</th>
+                                        <th>Detected By</th>
+                                        <th>Detected Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- サンプルデータ -->
+                            <tr data-href="issuedetail.html">
+                                <td>1</td>
+                                <td>Crack on Wall</td>
+                                <td><span class="badge badge-category">Crack</span></td>
+                                <td><span class="badge badge-status new">New</span></td>
+                                <td>Michael Brown (PM)</td>
+                                <td>2023-08-10</td>
+                                <td>Emily Davis (SM)</td>
+                                <td>2023-08-05</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-07-31</td>
+                            </tr>
+                            <tr data-href="issuedetail.html">
+                                <td>2</td>
+                                <td>Peeling Paint</td>
+                                <td><span class="badge badge-category">Peeling</span></td>
+                                <td><span class="badge badge-status in-review">In Review</span></td>
+                                <td>David Martinez (AD)</td>
+                                <td>2023-08-09</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-08-02</td>
+                                <td>Jane Smith (PD)</td>
+                                <td>2023-07-28</td>
+                            </tr>
+                            <tr data-href="issuedetail.html">
+                                <td>3</td>
+                                <td>Structural Crack</td>
+                                <td><span class="badge badge-category">Structure Defect</span></td>
+                                <td><span class="badge badge-status fixing">Fixing</span></td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-08-12</td>
+                                <td>Jane Smith (PD)</td>
+                                <td>2023-08-03</td>
+                                <td>Emily Davis (SM)</td>
+                                <td>2023-07-25</td>
+                            </tr>
+                            <tr data-href="issuedetail.html">
+                                <td>4</td>
+                                <td>Loose Fixture</td>
+                                <td><span class="badge badge-category">Others</span></td>
+                                <td><span class="badge badge-status verify">Verify</span></td>
+                                <td>Jane Smith (PD)</td>
+                                <td>2023-08-15</td>
+                                <td>Michael Brown (PM)</td>
+                                <td>2023-08-07</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-07-30</td>
+                            </tr>
+                            <tr data-href="issuedetail.html">
+                                <td>5</td>
+                                <td>Water Leakage</td>
+                                <td><span class="badge badge-category">Crack</span></td>
+                                <td><span class="badge badge-status fixed">Fixed</span></td>
+                                <td>Emily Davis (SM)</td>
+                                <td>2023-08-08</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-08-01</td>
+                                <td>David Martinez (AD)</td>
+                                <td>2023-07-24</td>
+                            </tr>
+                            <tr data-href="issuedetail.html">
+                                <td>6</td>
+                                <td>Broken Tile</td>
+                                <td><span class="badge badge-category">Peeling</span></td>
+                                <td><span class="badge badge-status fixing">Fixing</span></td>
+                                <td>Michael Brown (PM)</td>
+                                <td>2023-07-20</td>
+                                <td>Jane Smith (PD)</td>
+                                <td>2023-07-30</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-08-05</td>
+                            </tr>
+                            <tr data-href="issuedetail.html">
+                                <td>7</td>
+                                <td>Electrical Short</td>
+                                <td><span class="badge badge-category">Others</span></td>
+                                <td><span class="badge badge-status new">New</span></td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-07-31</td>
+                                <td>Emily Davis (SM)</td>
+                                <td>2023-08-05</td>
+                                <td>Michael Brown (PM)</td>
+                                <td>2023-08-10</td>
+                            </tr>
+                            <tr data-href="issuedetail.html">
+                                <td>8</td>
+                                <td>Foundation Crack</td>
+                                <td><span class="badge badge-category">Structure Defect</span></td>
+                                <td><span class="badge badge-status in-review">In Review</span></td>
+                                <td>Emily Davis (SM)</td>
+                                <td>2023-07-25</td>
+                                <td>Jane Smith (PD)</td>
+                                <td>2023-08-03</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-08-12</td>
+                            </tr>
+                            <tr data-href="issuedetail.html">
+                                <td>9</td>
+                                <td>Roof Leak</td>
+                                <td><span class="badge badge-category">Crack</span></td>
+                                <td><span class="badge badge-status fixing">Fixing</span></td>
+                                <td>Michael Brown (PM)</td>
+                                <td>2023-07-20</td>
+                                <td>Jane Smith (PD)</td>
+                                <td>2023-07-30</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-08-05</td>
+                            </tr>
+                            <tr data-href="issuedetail.html">
+                                <td>10</td>
+                                <td>Paint Peeling</td>
+                                <td><span class="badge badge-category">Peeling</span></td>
+                                <td><span class="badge badge-status fixed">Fixed</span></td>
+                                <td>David Martinez (AD)</td>
+                                <td>2023-07-24</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-08-01</td>
+                                <td>Emily Davis (SM)</td>
+                                <td>2023-08-08</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End of Outer Card Body -->
+        </div> <!-- End of Outer Card -->
+    </div>
+    <!-- Include Footer -->
+    <div include-html="footer.html"></div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <script>
+        includeHTML();
+
+        // 行をクリック可能にするスクリプト
+        document.addEventListener('DOMContentLoaded', function() {
+            const rows = document.querySelectorAll('tr[data-href]');
+            rows.forEach(row => {
+                row.addEventListener('click', function() {
+                    window.location.href = this.dataset.href;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

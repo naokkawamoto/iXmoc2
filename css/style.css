@@ -1,0 +1,240 @@
+/* メインカラーと差し色の定義 */
+:root {
+    --main-color: #172a88;
+    --accent-color: #df0522;
+}
+
+/*---------------------------------
+  Header & Footer
+-----------------------------------*/
+
+/* ヘッダーとフッターの背景をメインカラーに */
+.header, .footer {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 0;
+}
+
+/*---------------------------------
+  Navbar (Header Navigation)
+-----------------------------------*/
+
+/* ナビゲーションバーの高さを50pxに設定 */
+.navbar {
+    height: 50px;
+    line-height: 50px;
+}
+
+/* ナビゲーションリンクの色をメインカラーに */
+.navbar-nav .nav-link {
+    color: var(--main-color);
+}
+
+/* ドロップダウンメニューの設定 */
+.dropdown-menu {
+    background-color: white;
+    color: var(--main-color);
+}
+
+/* ロゴの設定 */
+.logo {
+    max-height: 40px;
+}
+
+/* 検索ボックスとボタン */
+.form-inline .form-control {
+    width: auto;
+    display: inline-block;
+    height: 30px;
+}
+
+/* ボタンアイコンの設定 */
+.btn-search {
+    background: none;
+    border: none;
+    color: var(--main-color);
+}
+
+.btn-search:hover {
+    color: var(--accent-color);
+}
+
+/* 検索ボタンのホバー設定 */
+.form-inline .btn:hover,
+.form-inline .btn:focus {
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* ユーザーアイコンの設定 */
+.user-icon {
+    font-size: 30px; /* アイコンのサイズを設定 */
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 10px;
+    color: var(--main-color);
+}
+
+/* メニューアイコンの設定 */
+.menu-icon {
+    font-size: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--main-color);
+}
+
+/* ベルアイコンの設定 */
+.bell-icon {
+    font-size: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--main-color);
+}
+
+/* クエスチョンアイコンの設定 */
+.question-icon {
+    font-size: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--main-color);
+}
+
+/* 検索アイコンの設定 */
+.search-icon {
+    font-size: 20px;
+    vertical-align: middle;
+    margin-left: 0px;
+    margin-right: 5px;
+    color: var(--main-color);
+}
+
+/* リンクのホバー時の色を変更 */
+.navbar-nav .nav-link:hover,
+.dropdown-item:hover {
+    color: var(--accent-color);
+}
+
+/* 検索ボックス、ボタン、ユーザーアイコンを中央配置 */
+.navbar-nav .form-inline,
+.navbar-nav .nav-item > a {
+    display: flex;
+    align-items: center;
+    height: 50px; /* navbar の高さに合わせて調整 */
+}
+
+.form-inline .form-control {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*---------------------------------
+  Project Detail Page
+-----------------------------------*/
+
+/* コンテンツのスタイル */
+.content {
+    padding: 15px;
+}
+
+/* フルスクリーンに対応 */
+body, html {
+    height: 100%;
+}
+
+/* セクションタイトルのスタイル */
+.section-title {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* 小さなテーブルのスタイル */
+.small-table th, .small-table td {
+    font-size: 0.875rem;
+    padding: 0.25rem;
+}
+
+.small-table th {
+    background-color: #f2f2f2;
+}
+
+/* テーブルボタンのスタイル */
+.table th button, .table td button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* ダッシュボードタイトルのスタイル */
+.dashboard-title {
+    text-align: left;
+    margin: 10px 0;
+    color: var(--main-color);
+}
+
+/* チャットアイコンの設定 */
+.chat-icon {
+    color: var(--accent-color);
+}
+
+/*---------------------------------
+  Issue List Page
+-----------------------------------*/
+
+/* テーブルの左右にマージンを20px開ける */
+.table-container {
+    margin: 0 20px;
+}
+
+/* フィールドの文字を小さく */
+.table th, .table td {
+    font-size: 0.875rem;
+}
+
+/* ホバー時にフィールドの色を変更 */
+.table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* カテゴリーのバッジスタイル */
+.badge-category {
+    background-color: #007bff;
+    color: white;
+}
+
+/* ステータスのバッジスタイル */
+.badge-status {
+    color: white;
+}
+
+.badge-status.new {
+    background-color: #007bff;
+}
+
+.badge-status.in-review {
+    background-color: #ffc107;
+    color: black;
+}
+
+.badge-status.fixing {
+    background-color: #17a2b8;
+}
+
+.badge-status.verify {
+    background-color: #6c757d;
+}
+
+.badge-status.fixed {
+    background-color: #28a745;
+}
+
+/* テーブルの行をホバーしたときにカーソルをポインタにする */
+.table-hover tbody tr {
+    cursor: pointer;
+}

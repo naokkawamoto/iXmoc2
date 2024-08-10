@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Detail</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <div include-html="header.html"></div>
+
+    <!-- Include Header -->
+    <div include-html="header_projectmenu.html"></div>
+    <!-- Include Header -->
+    <div include-html="header_progress.html"></div>
+
+    <div class="container">
+        <!-- Issue Info Section -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Issue Info</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NAME</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Assigned To</th>
+                                <th>Due Date</th>
+                                <th>Update By</th>
+                                <th>Update Date</th>
+                                <th>Detected By</th>
+                                <th>Detected Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Crack on Wall</td>
+                                <td><span class="badge badge-category">Crack</span></td>
+                                <td><span class="badge badge-status new">New</span></td>
+                                <td>Michael Brown (PM)</td>
+                                <td>2023-08-10</td>
+                                <td>Emily Davis (SM)</td>
+                                <td>2023-08-05</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>2023-07-31</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Issue Photos Section -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Issue Photos</h4>
+            </div>
+            <div class="card-body">
+                <!-- 小さい画像 -->
+                <img src="/images/defect_sample.png" alt="Photo 3" height="70" class="me-3" data-bs-toggle="modal" data-bs-target="#imageModal1">
+                <img src="/images/defect_sample.png" alt="Photo 3" height="70" class="me-3" data-bs-toggle="modal" data-bs-target="#imageModal2">
+                <img src="/images/defect_sample.png" alt="Photo 3" height="70" class="me-3" data-bs-toggle="modal" data-bs-target="#imageModal3">
+
+                <!-- モーダル -->
+                <div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="/images/defect_sample.png" alt="Photo 3" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel2" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="/images/defect_sample.png" alt="Photo 3" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModalLabel3" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="/images/defect_sample.png" alt="Photo 3" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <button type="button" class="btn btn-primary">ADD PHOTO</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Issue Description Section -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Description</h4>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Detected By: <span class="fw-bold">Chris Wilson (SE)</span><br>
+                    This issue was initially detected on the first floor of the Tokyo facility. The crack appears to be expanding and requires immediate attention to prevent further damage to the structure.
+                </p>
+            </div>
+        </div>
+
+        <!-- Update Issue Section -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Update Issue</h4>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="assignedTo" class="form-label">Assigned To</label>
+                            <select class="form-select" id="assignedTo">
+                                <option selected>Choose user...</option>
+                                <option value="1">Michael Brown (PM)</option>
+                                <option value="2">Emily Davis (SM)</option>
+                                <option value="3">Chris Wilson (SE)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="dueDate" class="form-label">Due Date</label>
+                            <input type="date" class="form-control" id="dueDate">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="status" class="form-label">Status</label>
+                            <select class="form-select" id="status">
+                                <option selected>Choose status...</option>
+                                <option value="new">New</option>
+                                <option value="in_review">In Review</option>
+                                <option value="fixing">Fixing</option>
+                                <option value="verify">Verify</option>
+                                <option value="fixed">Fixed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="comment" class="form-label">Comment</label>
+                            <textarea class="form-control" id="comment" rows="2" placeholder="Enter your comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='issuelist.html'">UPDATE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Comment History Section -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Comment History</h4>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <p><strong>Emily Davis (SM)</strong> - 2023-08-05</p>
+                    <p>The investigation is underway. The issue will be resolved by the due date.</p>
+                </li>
+                <li class="list-group-item">
+                    <p><strong>Chris Wilson (SE)</strong> - 2023-07-31</p>
+                    <p>Initial detection of the crack. The issue was reported to the project manager for further action.</p>
+                </li>
+                <li class="list-group-item">
+                    <p><strong>Michael Brown (PM)</strong> - 2023-08-01</p>
+                    <p>The crack is under observation. Further details will be provided after the inspection.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Include Footer -->
+    <div include-html="footer.html"></div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>
