@@ -17,68 +17,70 @@
     <div include-html="header_progress.html"></div>
 
         <!-- Issue Creation Form -->
-        <div class="card">
-            <div class="card-body">
-                <form>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="issueName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="issueName" placeholder="Enter issue name">
+        <div class="container">
+            <div class="card mt-4 mb-4">
+                <div class="card-body">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="issueName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="issueName" placeholder="Enter issue name">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="issueCategory" class="form-label">Category</label>
+                                <select class="form-select" id="issueCategory">
+                                    <option selected>Choose category...</option>
+                                    <option value="1">Structural Defect</option>
+                                    <option value="2">Others</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="issueCategory" class="form-label">Category</label>
-                            <select class="form-select" id="issueCategory">
-                                <option selected>Choose category...</option>
-                                <option value="1">Structural Defect</option>
-                                <option value="2">Others</option>
-                            </select>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="detectedBy" class="form-label">Detected By</label>
+                                <select class="form-select" id="detectedBy">
+                                    <option selected>Choose user...</option>
+                                    <option value="1">User1 (Ad)</option>
+                                    <option value="2">User2 (PM)</option>
+                                    <option value="3">User3 (SM)</option>
+                                    <option value="4">User4 (OP)</option>
+                                    <option value="5">User5 (VD)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="assignedTo" class="form-label">Assigned To</label>
+                                <select class="form-select" id="assignedTo">
+                                    <option selected>Choose user...</option>
+                                    <option value="1">User1 (Ad)</option>
+                                    <option value="2">User2 (PM)</option>
+                                    <option value="3">User3 (SM)</option>
+                                    <option value="4">User4 (OP)</option>
+                                    <option value="5">User5 (VD)</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="detectedBy" class="form-label">Detected By</label>
-                            <select class="form-select" id="detectedBy">
-                                <option selected>Choose user...</option>
-                                <option value="1">User1 (Ad)</option>
-                                <option value="2">User2 (PM)</option>
-                                <option value="3">User3 (SM)</option>
-                                <option value="4">User4 (OP)</option>
-                                <option value="5">User5 (VD)</option>
-                            </select>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="dueDate" class="form-label">Due Date</label>
+                                <input type="date" class="form-control" id="dueDate">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="issuePhotos" class="form-label">Photos</label>
+                                <input type="file" class="form-control" id="issuePhotos" multiple>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="assignedTo" class="form-label">Assigned To</label>
-                            <select class="form-select" id="assignedTo">
-                                <option selected>Choose user...</option>
-                                <option value="1">User1 (Ad)</option>
-                                <option value="2">User2 (PM)</option>
-                                <option value="3">User3 (SM)</option>
-                                <option value="4">User4 (OP)</option>
-                                <option value="5">User5 (VD)</option>
-                            </select>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="issueDescription" class="form-label">Issue Description</label>
+                                <textarea class="form-control" id="issueDescription" rows="4" placeholder="Enter issue description"></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="dueDate" class="form-label">Due Date</label>
-                            <input type="date" class="form-control" id="dueDate">
+                        <div class="text-center">
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='issuelist.html'">CANCEL</button>
+                            <button type="submit" class="btn btn-primary" onclick="window.location.href='issuelist.html'">CREATE</button>
                         </div>
-                        <div class="col-md-6">
-                            <label for="issuePhotos" class="form-label">Photos</label>
-                            <input type="file" class="form-control" id="issuePhotos" multiple>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-12">
-                            <label for="issueDescription" class="form-label">Issue Description</label>
-                            <textarea class="form-control" id="issueDescription" rows="4" placeholder="Enter issue description"></textarea>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-secondary" onclick="window.location.href='issuelist.html'">CANCEL</button>
-                        <button type="submit" class="btn btn-primary" onclick="window.location.href='issuelist.html'">CREATE</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

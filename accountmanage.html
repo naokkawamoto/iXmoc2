@@ -6,91 +6,12 @@
     <title>iXmoc - Account Manage</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .header, .footer {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 0;
-            position: relative;
-        }
-        .sidebar {
-            background-color: #0056b3;
-            color: white;
-            min-height: calc(100vh - 120px);
-            transition: width 0.3s;
-            position: fixed;
-            top: 70px;
-            bottom: 60px;
-        }
-        .sidebar-expanded {
-            width: 250px;
-        }
-        .sidebar-collapsed {
-            width: 0;
-            overflow: hidden;
-        }
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-        }
-        .content {
-            padding: 15px;
-            margin-left: 250px;
-            transition: margin-left 0.3s;
-        }
-        .content.sidebar-collapsed {
-            margin-left: 0;
-        }
-        body, html {
-            height: 100%;
-        }
-        .container-fluid {
-            min-height: calc(100vh - 120px);
-        }
-        .section-title {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        .small-table th, .small-table td {
-            font-size: 0.875rem;
-            padding: 0.25rem;
-        }
-        .small-table th {
-            background-color: #f2f2f2;
-        }
-        .section-content {
-            margin-bottom: 20px;
-        }
-        .badge {
-            font-size: 0.875rem;
-        }
-        .btn-dummy {
-            margin-right: 5px;
-        }
-        .action-buttons {
-            margin-bottom: 20px;
-            text-align: right;
-        }
-        .action-buttons .btn {
-            margin-left: 5px;
-        }
-        .contact-button {
-            position: absolute;
-            right: 20px;
-            top: 100px;
-            font-size: 1.25rem; /* ボタンのサイズを大きく */
-            padding: 10px 20px; /* パディングを追加 */
-        }
-    </style>
 </head>
 <body>
+    <!-- Include Header -->
     <div include-html="header.html"></div>
-    <button class="btn btn-primary contact-button">Contact Us</button>
-
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div include-html="sidebar.html"></div>
 
             <main id="main-content" class="col content">
                 <nav aria-label="breadcrumb">
@@ -100,7 +21,9 @@
                     </ol>
                 </nav>
                 <h2>Account Manage</h2>
-
+                <div class="d-flex justify-content-end mb-3">
+                    <button class="btn btn-primary contact-button">Contact Us</button>
+                </div>
                 <!-- Account Info Section -->
                 <div class="section-content">
                     <h3 class="section-title">Account Info</h3>
@@ -132,10 +55,12 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="action-buttons">
-                        <button class="btn btn-warning">Change Payment Method</button>
-                        <button class="btn btn-info">Change Contract</button>
-                        <a href="usermanage.html" class="btn btn-success">Add User</a>
+                    <div class="d-flex justify-content-end mb-3">
+                        <div class="action-buttons">
+                            <button class="btn btn-warning">Change Payment Method</button>
+                            <button class="btn btn-info">Change Contract</button>
+                            <a href="usermanage.html" class="btn btn-success">Add User</a>
+                        </div>
                     </div>
                 </div>
 

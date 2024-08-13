@@ -14,167 +14,383 @@
     <div include-html="header_projectmenu.html"></div>
     <!-- Include Header -->
     <div include-html="header_progress.html"></div>
+    <div class="container">
+        <!-- Nav Tabs -->
+        <ul class="nav nav-tabs mt-4" id="issueTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="issuestable-tab" data-bs-toggle="tab" href="#issuestable" role="tab" aria-controls="issuestable" aria-selected="true"><span class="bi bi-table"></span>Table View</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="stickies-tab" data-bs-toggle="tab" href="#stickies" role="tab" aria-controls="stickies" aria-selected="false"><span class="bi bi-stickies"></span>Stickies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="ganttchart-tab" data-bs-toggle="tab" href="#ganttchart" role="tab" aria-controls="ganttchart" aria-selected="false"><span class="bi bi-bar-chart-steps"></span>Gantt Chart</a>
+            </li>
+        </ul>
 
-        <!-- Issue List -->
-        <div class="row">
-            <div class="col-md-12 mt-2" style="margin-right: 10px;">
-                <div class="d-flex justify-content-end mb-2">
-                    <a href="issuecreate.html" class="btn btn-success">New Create Issue</a>
+        <div class="tab-content" id="issueTabContent">
+            <!-- Table List Section -->
+            <div class="tab-pane fade show active" id="issuestable" role="tabpanel" aria-labelledby="issuestable-tab">
+                <!-- Issue List -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 mt-2" style="margin-right: 10px;">
+                            <div class="d-flex justify-content-end mb-2">
+                                <a href="issuecreate.html" class="btn btn-success">New Create Issue</a>
+                            </div>
+                            <div class="table-container">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>ID <button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                            <th>NAME<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                            <th>Category<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                            <th>Status<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                            <th>Assigned To<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                            <th>Due Date<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                            <th>Update By<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                            <th>Update Date<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                            <th>Detected By<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                            <th>Detected Date<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- サンプルデータ -->
+                                        <tr data-href="issuedetail.html">
+                                            <td>1</td>
+                                            <td>Crack on Wall</td>
+                                            <td><span class="badge badge-category">Crack</span></td>
+                                            <td><span class="badge badge-status new">New</span></td>
+                                            <td>Michael Brown (PM)</td>
+                                            <td>2023-08-10</td>
+                                            <td>Emily Davis (SM)</td>
+                                            <td>2023-08-05</td>
+                                            <td>Chris Wilson (SE)</td>
+                                            <td>2023-07-31</td>
+                                        </tr>
+                                        <tr data-href="issuedetail.html">
+                                            <td>2</td>
+                                            <td>Peeling Paint</td>
+                                            <td><span class="badge badge-category">Peeling</span></td>
+                                            <td><span class="badge badge-status in-review">In Review</span></td>
+                                            <td>David Martinez (AD)</td>
+                                            <td>2023-08-09</td>
+                                            <td>Chris Wilson (SE)</td>
+                                            <td>2023-08-02</td>
+                                            <td>Jane Smith (PD)</td>
+                                            <td>2023-07-28</td>
+                                        </tr>
+                                        <tr data-href="issuedetail.html">
+                                            <td>3</td>
+                                            <td>Structural Crack</td>
+                                            <td><span class="badge badge-category">Structure Defect</span></td>
+                                            <td><span class="badge badge-status fixing">Fixing</span></td>
+                                            <td>Chris Wilson (SE)</td>
+                                            <td>2023-08-12</td>
+                                            <td>Jane Smith (PD)</td>
+                                            <td>2023-08-03</td>
+                                            <td>Emily Davis (SM)</td>
+                                            <td>2023-07-25</td>
+                                        </tr>
+                                        <tr data-href="issuedetail.html">
+                                            <td>4</td>
+                                            <td>Loose Fixture</td>
+                                            <td><span class="badge badge-category">Others</span></td>
+                                            <td><span class="badge badge-status verify">Verify</span></td>
+                                            <td>Jane Smith (PD)</td>
+                                            <td>2023-08-15</td>
+                                            <td>Michael Brown (PM)</td>
+                                            <td>2023-08-07</td>
+                                            <td>Chris Wilson (SE)</td>
+                                            <td>2023-07-30</td>
+                                        </tr>
+                                        <tr data-href="issuedetail.html">
+                                            <td>5</td>
+                                            <td>Water Leakage</td>
+                                            <td><span class="badge badge-category">Crack</span></td>
+                                            <td><span class="badge badge-status fixed">Fixed</span></td>
+                                            <td>Emily Davis (SM)</td>
+                                            <td>2023-08-08</td>
+                                            <td>Chris Wilson (SE)</td>
+                                            <td>2023-08-01</td>
+                                            <td>David Martinez (AD)</td>
+                                            <td>2023-07-24</td>
+                                        </tr>
+                                        <tr data-href="issuedetail.html">
+                                            <td>6</td>
+                                            <td>Broken Tile</td>
+                                            <td><span class="badge badge-category">Peeling</span></td>
+                                            <td><span class="badge badge-status fixing">Fixing</span></td>
+                                            <td>Michael Brown (PM)</td>
+                                            <td>2023-07-20</td>
+                                            <td>Jane Smith (PD)</td>
+                                            <td>2023-07-30</td>
+                                            <td>Chris Wilson (SE)</td>
+                                            <td>2023-08-05</td>
+                                        </tr>
+                                        <tr data-href="issuedetail.html">
+                                            <td>7</td>
+                                            <td>Electrical Short</td>
+                                            <td><span class="badge badge-category">Others</span></td>
+                                            <td><span class="badge badge-status new">New</span></td>
+                                            <td>Chris Wilson (SE)</td>
+                                            <td>2023-07-31</td>
+                                            <td>Emily Davis (SM)</td>
+                                            <td>2023-08-05</td>
+                                            <td>Michael Brown (PM)</td>
+                                            <td>2023-08-10</td>
+                                        </tr>
+                                        <tr data-href="issuedetail.html">
+                                            <td>8</td>
+                                            <td>Foundation Crack</td>
+                                            <td><span class="badge badge-category">Structure Defect</span></td>
+                                            <td><span class="badge badge-status in-review">In Review</span></td>
+                                            <td>Emily Davis (SM)</td>
+                                            <td>2023-07-25</td>
+                                            <td>Jane Smith (PD)</td>
+                                            <td>2023-08-03</td>
+                                            <td>Chris Wilson (SE)</td>
+                                            <td>2023-08-12</td>
+                                        </tr>
+                                        <tr data-href="issuedetail.html">
+                                            <td>9</td>
+                                            <td>Roof Leak</td>
+                                            <td><span class="badge badge-category">Crack</span></td>
+                                            <td><span class="badge badge-status fixing">Fixing</span></td>
+                                            <td>Michael Brown (PM)</td>
+                                            <td>2023-07-20</td>
+                                            <td>Jane Smith (PD)</td>
+                                            <td>2023-07-30</td>
+                                            <td>Chris Wilson (SE)</td>
+                                            <td>2023-08-05</td>
+                                        </tr>
+                                        <tr data-href="issuedetail.html">
+                                            <td>10</td>
+                                            <td>Paint Peeling</td>
+                                            <td><span class="badge badge-category">Peeling</span></td>
+                                            <td><span class="badge badge-status fixed">Fixed</span></td>
+                                            <td>David Martinez (AD)</td>
+                                            <td>2023-07-24</td>
+                                            <td>Chris Wilson (SE)</td>
+                                            <td>2023-08-01</td>
+                                            <td>Emily Davis (SM)</td>
+                                            <td>2023-08-08</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- ページネーションの例 -->
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
-                <div class="table-container">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>ID <button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                                <th>NAME<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                                <th>Category<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                                <th>Status<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                                <th>Assigned To<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                                <th>Due Date<button class="btn btn-sm btn-link">▲</button><buttonのclass="btn btn-sm btn-link">▼</button></th>
-                                <th>Update By<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                                <th>Update Date<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                                <th>Detected By<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                                <th>Detected Date<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- サンプルデータ -->
-                            <tr data-href="issuedetail.html">
-                                <td>1</td>
-                                <td>Crack on Wall</td>
-                                <td><span class="badge badge-category">Crack</span></td>
-                                <td><span class="badge badge-status new">New</span></td>
-                                <td>Michael Brown (PM)</td>
-                                <td>2023-08-10</td>
-                                <td>Emily Davis (SM)</td>
-                                <td>2023-08-05</td>
-                                <td>Chris Wilson (SE)</td>
-                                <td>2023-07-31</td>
-                            </tr>
-                            <tr data-href="issuedetail.html">
-                                <td>2</td>
-                                <td>Peeling Paint</td>
-                                <td><span class="badge badge-category">Peeling</span></td>
-                                <td><span class="badge badge-status in-review">In Review</span></td>
-                                <td>David Martinez (AD)</td>
-                                <td>2023-08-09</td>
-                                <td>Chris Wilson (SE)</td>
-                                <td>2023-08-02</td>
-                                <td>Jane Smith (PD)</td>
-                                <td>2023-07-28</td>
-                            </tr>
-                            <tr data-href="issuedetail.html">
-                                <td>3</td>
-                                <td>Structural Crack</td>
-                                <td><span class="badge badge-category">Structure Defect</span></td>
-                                <td><span class="badge badge-status fixing">Fixing</span></td>
-                                <td>Chris Wilson (SE)</td>
-                                <td>2023-08-12</td>
-                                <td>Jane Smith (PD)</td>
-                                <td>2023-08-03</td>
-                                <td>Emily Davis (SM)</td>
-                                <td>2023-07-25</td>
-                            </tr>
-                            <tr data-href="issuedetail.html">
-                                <td>4</td>
-                                <td>Loose Fixture</td>
-                                <td><span class="badge badge-category">Others</span></td>
-                                <td><span class="badge badge-status verify">Verify</span></td>
-                                <td>Jane Smith (PD)</td>
-                                <td>2023-08-15</td>
-                                <td>Michael Brown (PM)</td>
-                                <td>2023-08-07</td>
-                                <td>Chris Wilson (SE)</td>
-                                <td>2023-07-30</td>
-                            </tr>
-                            <tr data-href="issuedetail.html">
-                                <td>5</td>
-                                <td>Water Leakage</td>
-                                <td><span class="badge badge-category">Crack</span></td>
-                                <td><span class="badge badge-status fixed">Fixed</span></td>
-                                <td>Emily Davis (SM)</td>
-                                <td>2023-08-08</td>
-                                <td>Chris Wilson (SE)</td>
-                                <td>2023-08-01</td>
-                                <td>David Martinez (AD)</td>
-                                <td>2023-07-24</td>
-                            </tr>
-                            <tr data-href="issuedetail.html">
-                                <td>6</td>
-                                <td>Broken Tile</td>
-                                <td><span class="badge badge-category">Peeling</span></td>
-                                <td><span class="badge badge-status fixing">Fixing</span></td>
-                                <td>Michael Brown (PM)</td>
-                                <td>2023-07-20</td>
-                                <td>Jane Smith (PD)</td>
-                                <td>2023-07-30</td>
-                                <td>Chris Wilson (SE)</td>
-                                <td>2023-08-05</td>
-                            </tr>
-                            <tr data-href="issuedetail.html">
-                                <td>7</td>
-                                <td>Electrical Short</td>
-                                <td><span class="badge badge-category">Others</span></td>
-                                <td><span class="badge badge-status new">New</span></td>
-                                <td>Chris Wilson (SE)</td>
-                                <td>2023-07-31</td>
-                                <td>Emily Davis (SM)</td>
-                                <td>2023-08-05</td>
-                                <td>Michael Brown (PM)</td>
-                                <td>2023-08-10</td>
-                            </tr>
-                            <tr data-href="issuedetail.html">
-                                <td>8</td>
-                                <td>Foundation Crack</td>
-                                <td><span class="badge badge-category">Structure Defect</span></td>
-                                <td><span class="badge badge-status in-review">In Review</span></td>
-                                <td>Emily Davis (SM)</td>
-                                <td>2023-07-25</td>
-                                <td>Jane Smith (PD)</td>
-                                <td>2023-08-03</td>
-                                <td>Chris Wilson (SE)</td>
-                                <td>2023-08-12</td>
-                            </tr>
-                            <tr data-href="issuedetail.html">
-                                <td>9</td>
-                                <td>Roof Leak</td>
-                                <td><span class="badge badge-category">Crack</span></td>
-                                <td><span class="badge badge-status fixing">Fixing</span></td>
-                                <td>Michael Brown (PM)</td>
-                                <td>2023-07-20</td>
-                                <td>Jane Smith (PD)</td>
-                                <td>2023-07-30</td>
-                                <td>Chris Wilson (SE)</td>
-                                <td>2023-08-05</td>
-                            </tr>
-                            <tr data-href="issuedetail.html">
-                                <td>10</td>
-                                <td>Paint Peeling</td>
-                                <td><span class="badge badge-category">Peeling</span></td>
-                                <td><span class="badge badge-status fixed">Fixed</span></td>
-                                <td>David Martinez (AD)</td>
-                                <td>2023-07-24</td>
-                                <td>Chris Wilson (SE)</td>
-                                <td>2023-08-01</td>
-                                <td>Emily Davis (SM)</td>
-                                <td>2023-08-08</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            </div>
+            
+            <!-- Stickies Section -->
+            <div class="tab-pane fade" id="stickies" role="tabpanel" aria-labelledby="stickies-tab">
+                <div class="container">
+                    <div class="task-board">
+                        <div class="task-column card">
+                            <h4 class="text-center"><span class="badge bg-primary">NEW</span></h4>
+                            <a href="issuedetail.html" class="text-decoration-none">
+                                <div class="card task-card" style="margin-left: 1rem; margin-right: 1rem">
+                                    <div class="card-header">Crack on Wall</div>
+                                    <div class="card-body">
+                                        <p class="card-text">Assigned to: Michael Brown</p>
+                                        <p class="card-text">Due Date: 2023-08-10</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="issuedetail.html" class="text-decoration-none">
+                                <div class="card task-card" style="margin-left: 1rem; margin-right: 1rem">
+                                    <div class="card-header">Electrical Short</div>
+                                    <div class="card-body">
+                                        <p class="card-text">Assigned to: Chris Wilson</p>
+                                        <p class="card-text">Due Date: 2023-07-31</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="task-column card">
+                            <h4 class="text-center"><span class="badge bg-warning text-dark">IN REVIEW</span></h4>
+                            <a href="issuedetail.html" class="text-decoration-none">
+                                <div class="card task-card" style="margin-left: 1rem; margin-right: 1rem">
+                                    <div class="card-header">Peeling Paint</div>
+                                    <div class="card-body">
+                                        <p class="card-text">Assigned to: David Martinez</p>
+                                        <p class="card-text">Due Date: 2023-08-09</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="issuedetail.html" class="text-decoration-none">
+                                <div class="card task-card" style="margin-left: 1rem; margin-right: 1rem">
+                                    <div class="card-header">Foundation Crack</div>
+                                    <div class="card-body">
+                                        <p class="card-text">Assigned to: Emily Davis</p>
+                                        <p class="card-text">Due Date: 2023-07-25</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="task-column card">
+                            <h4 class="text-center"><span class="badge bg-info text-dark">FIXING</span></h4>
+                            <a href="issuedetail.html" class="text-decoration-none">
+                                <div class="card task-card" style="margin-left: 1rem; margin-right: 1rem">
+                                    <div class="card-header">Structural Crack</div>
+                                    <div class="card-body">
+                                        <p class="card-text">Assigned to: Chris Wilson</p>
+                                        <p class="card-text">Due Date: 2023-08-12</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="issuedetail.html" class="text-decoration-none">
+                                <div class="card task-card" style="margin-left: 1rem; margin-right: 1rem">
+                                    <div class="card-header">Broken Tile</div>
+                                    <div class="card-body">
+                                        <p class="card-text">Assigned to: Michael Brown</p>
+                                        <p class="card-text">Due Date: 2023-07-20</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="issuedetail.html" class="text-decoration-none">
+                                <div class="card task-card" style="margin-left: 1rem; margin-right: 1rem">
+                                    <div class="card-header">Roof Leak</div>
+                                    <div class="card-body">
+                                        <p class="card-text">Assigned to: Michael Brown</p>
+                                        <p class="card-text">Due Date: 2023-07-20</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="task-column card">
+                            <h4 class="text-center"><span class="badge bg-secondary">VERIFY</span></h4>
+                            <a href="issuedetail.html" class="text-decoration-none">
+                                <div class="card task-card" style="margin-left: 1rem; margin-right: 1rem">
+                                    <div class="card-header">Loose Fixture</div>
+                                    <div class="card-body">
+                                        <p class="card-text">Assigned to: Jane Smith</p>
+                                        <p class="card-text">Due Date: 2023-08-15</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="task-column card">
+                            <h4 class="text-center"><span class="badge bg-success">FIXED</span></h4>
+                            <a href="issuedetail.html" class="text-decoration-none">
+                                <div class="card task-card" style="margin-left: 1rem; margin-right: 1rem">
+                                    <div class="card-header">Water Leakage</div>
+                                    <div class="card-body">
+                                        <p class="card-text">Assigned to: Emily Davis</p>
+                                        <p class="card-text">Due Date: 2023-08-08</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="issuedetail.html" class="text-decoration-none">
+                                <div class="card task-card" style="margin-left: 1rem; margin-right: 1rem">
+                                    <div class="card-header">Paint Peeling</div>
+                                    <div class="card-body">
+                                        <p class="card-text">Assigned to: David Martinez</p>
+                                        <p class="card-text">Due Date: 2023-07-24</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <!-- ページネーションの例 -->
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </ul>
-                </nav>
+            </div>
+            
+            <!-- Gantt Chart Section -->
+            <div class="tab-pane fade" id="ganttchart" role="tabpanel" aria-labelledby="ganttchart-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="gantt-index">
+                            <span>7/1</span>
+                            <span>7/2</span>
+                            <span>7/3</span>
+                            <span>7/4</span>
+                            <span>7/5</span>
+                            <span>7/6</span>
+                            <span>7/7</span>
+                            <span>7/8</span>
+                            <span>7/9</span>
+                            <span>7/10</span>
+                            <span>7/11</span>
+                            <span>7/12</span>
+                            <span>7/13</span>
+                            <span>7/14</span>
+                            <span>7/15</span>
+                            <span>7/16</span>
+                            <span>7/17</span>
+                            <span>7/18</span>
+                            <span>7/19</span>
+                            <span>7/20</span>
+                            <span>7/21</span>
+                            <span>7/22</span>
+                            <span>7/23</span>
+                            <span>7/24</span>
+                            <span>7/25</span>
+                            <span>7/26</span>
+                            <span>7/27</span>
+                            <span>7/28</span>
+                            <span>7/29</span>
+                            <span>7/30</span>
+                            <span>7/31</span>
+                        </div>
+                        <div class="gantt-chart">
+                            <div class="gantt-row">
+                                <div class="gantt-label">Issue 1</div>
+                                <div class="gantt-bar" style="left: 0%; width: 10%; background-color: red;">40%</div>
+                                <div class="gantt-scheduled-bar" style="left: 0%; width: 30%;"></div>
+                            </div>
+                            <div class="gantt-row">
+                                <div class="gantt-label">Issue 2</div>
+                                <div class="gantt-bar" style="left: 10%; width: 20%; background-color: yellow;">40%</div>
+                                <div class="gantt-scheduled-bar" style="left: 10%; width: 30%;"></div>
+                            </div>
+                            <div class="gantt-row">
+                                <div class="gantt-label">Issue 3</div>
+                                <div class="gantt-bar" style="left: 20%; width: 30%; background-color: blue;">40%</div>
+                                <div class="gantt-scheduled-bar" style="left: 20%; width: 35%;"></div>
+                            </div>
+                            <div class="gantt-row">
+                                <div class="gantt-label">Issue 4</div>
+                                <div class="gantt-bar" style="left: 30%; width: 10%; background-color: green;">40%</div>
+                                <div class="gantt-scheduled-bar" style="left: 30%; width: 15%;"></div>
+                            </div>
+                            <div class="gantt-row">
+                                <div class="gantt-label">Issue 5</div>
+                                <div class="gantt-bar" style="left: 40%; width: 25%; background-color: red;">40%</div>
+                                <div class="gantt-scheduled-bar" style="left: 40%; width: 30%;"></div>
+                            </div>
+                            <div class="gantt-row">
+                                <div class="gantt-label">Issue 6</div>
+                                <div class="gantt-bar" style="left: 50%; width: 20%; background-color: yellow;">40%</div>
+                                <div class="gantt-scheduled-bar" style="left: 50%; width: 25%;"></div>
+                            </div>
+                            <div class="gantt-row">
+                                <div class="gantt-label">Issue 7</div>
+                                <div class="gantt-bar" style="left: 60%; width: 15%; background-color: blue;">40%</div>
+                                <div class="gantt-scheduled-bar" style="left: 60%; width: 20%;"></div>
+                            </div>
+                            <div class="gantt-row">
+                                <div class="gantt-label">Issue 8</div>
+                                <div class="gantt-bar" style="left: 70%; width: 10%; background-color: green;">40%</div>
+                                <div class="gantt-scheduled-bar" style="left: 70%; width: 15%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
+    </div>
     <!-- Include Footer -->
     <div include-html="footer.html"></div>
 

@@ -10,45 +10,46 @@
 <body>
     <!-- Include Header -->
     <div include-html="header.html"></div>
-
     <!-- Include Header -->
     <div include-html="header_projectmenu.html"></div>
     <!-- Include Header -->
     <div include-html="header_progress.html"></div>
         <!-- Scan Creation Form -->
-        <div class="card">
-            <div class="card-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="facilitySelect" class="form-label">Facility</label>
-                        <select id="facilitySelect" class="form-select">
-                            <option selected>Choose...</option>
-                            <option value="Facility1">Facility 1</option>
-                            <option value="Facility2">Facility 2</option>
-                            <option value="Facility3">Facility 3</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="locationSelect" class="form-label">Location</label>
-                        <select id="locationSelect" class="form-select">
-                            <option selected>Choose...</option>
-                            <option value="Location1">Location 1</option>
-                            <option value="Location2">Location 2</option>
-                            <option value="Location3">Location 3</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="reportFile" class="form-label">Update Report File</label>
-                        <input class="form-control" type="file" id="reportFile">
-                        <small class="form-text text-muted small-font">対応ファイル：ifc/ply/obj/fbx</small>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-secondary" onclick="window.location.href='3dscanlist.html'">CANCEL</button>
-                        <button type="submit" class="btn btn-primary btn-lg">CREATE</button>
-                    </div>
-                </form>
+        <div class="container">
+            <div class="card mt-4 mb-4">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="facilitySelect" class="form-label">Facility</label>
+                            <select id="facilitySelect" class="form-select">
+                                <option selected>Choose...</option>
+                                <option value="Facility1">Facility 1</option>
+                                <option value="Facility2">Facility 2</option>
+                                <option value="Facility3">Facility 3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="locationSelect" class="form-label">Location</label>
+                            <select id="locationSelect" class="form-select">
+                                <option selected>Choose...</option>
+                                <option value="Location1">Location 1</option>
+                                <option value="Location2">Location 2</option>
+                                <option value="Location3">Location 3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reportFile" class="form-label">Update Report File</label>
+                            <input class="form-control" type="file" id="reportFile">
+                            <small class="form-text text-muted small-font">対応ファイル：ifc/ply/obj/fbx</small>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='3dscanlist.html'">CANCEL</button>
+                            <button type="submit" class="btn btn-primary btn-lg">CREATE</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
+        </div>          
     </div>
 
     <!-- Include Footer -->

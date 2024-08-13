@@ -238,3 +238,92 @@ body, html {
 .table-hover tbody tr {
     cursor: pointer;
 }
+/*---------------------------------
+  GanttChart Page
+-----------------------------------*/
+
+.badge {
+    font-size: 0.875rem;
+}
+.gantt-chart {
+    position: relative;
+    overflow-x: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.gantt-row {
+    position: relative;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+.gantt-label {
+    width: 150px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.gantt-bar, .gantt-scheduled-bar {
+    position: absolute;
+    height: 20px;
+    top: 0;
+}
+.gantt-bar {
+    color: white;
+    text-align: center;
+    line-height: 20px;
+}
+.gantt-scheduled-bar {
+    background-color: #28a745;
+    opacity: 0.5;
+}
+.gantt-index {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    color: #777;
+}
+/*---------------------------------
+  Task Board Page
+-----------------------------------*/
+
+.task-board {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.task-column {
+    width: 16%;
+    margin-top: 1rem; /* mt-4 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.task-column h3 {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 1rem; /* カラムのタイトル下にマージン */
+}
+
+.task-card {
+    margin-bottom: 0.5rem; /* カードの間のマージン */
+}
+
+.task-card .card-body {
+    font-size: 0.6rem; /* フォントサイズを小さく */
+    padding: 10px;
+}
+
+.task-card .card-header {
+    font-weight: bold;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.task-card:hover {
+    background-color: #f8f9fa; /* ホバー時の背景色を変更 */
+    transition: background-color 0.3s;
+}
+

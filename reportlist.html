@@ -16,192 +16,193 @@
     <div include-html="header_progress.html"></div>
 
     <!-- Report List -->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="d-flex justify-content-end mb-2 mt-2">
-                <a href="reportcreate.html" class="btn btn-success">New Create Report</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-end mb-2 mt-2">
+                    <a href="reportcreate.html" class="btn btn-success">New Create Report</a>
+                </div>
+                <div class="table-container">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID <button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                <th>Report Date<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                <th>Reported By<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                <th>Facility<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                <th>Location<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                <th>Issues<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                                <th>Classify<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- サンプルデータ -->
+                            <tr data-href="reportdetail.html">
+                                <td>1</td>
+                                <td>2024-08-10</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>TOKYO</td>
+                                <td>1st Floor</td>
+                                <td>32</td>
+                                <td>
+                                    <span class="badge bg-primary">New: 5</span>
+                                    <span class="badge bg-warning text-dark">In Review: 3</span>
+                                    <span class="badge bg-info text-dark">Fixing: 7</span>
+                                    <span class="badge bg-secondary">Verify: 4</span>
+                                    <span class="badge bg-success">Fixed: 3</span>
+                                </td>
+                            </tr>
+                            <tr data-href="reportdetail.html">
+                                <td>2</td>
+                                <td>2024-08-09</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>TOKYO</td>
+                                <td>1st Floor</td>
+                                <td>45</td>
+                                <td>
+                                    <span class="badge bg-primary">New: 3</span>
+                                    <span class="badge bg-warning text-dark">In Review: 4</span>
+                                    <span class="badge bg-info text-dark">Fixing: 5</span>
+                                    <span class="badge bg-secondary">Verify: 2</span>
+                                    <span class="badge bg-success">Fixed: 6</span>
+                                </td>
+                            </tr>
+                            <tr data-href="reportdetail.html">
+                                <td>3</td>
+                                <td>2024-08-08</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>TOKYO</td>
+                                <td>1st Floor</td>
+                                <td>47</td>
+                                <td>
+                                    <span class="badge bg-primary">New: 2</span>
+                                    <span class="badge bg-warning text-dark">In Review: 5</span>
+                                    <span class="badge bg-info text-dark">Fixing: 4</span>
+                                    <span class="badge bg-secondary">Verify: 3</span>
+                                    <span class="badge bg-success">Fixed: 7</span>
+                                </td>
+                            </tr>
+                            <tr data-href="reportdetail.html">
+                                <td>4</td>
+                                <td>2024-08-07</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>TOKYO</td>
+                                <td>1st Floor</td>
+                                <td>50</td>
+                                <td>
+                                    <span class="badge bg-primary">New: 4</span>
+                                    <span class="badge bg-warning text-dark">In Review: 3</span>
+                                    <span class="badge bg-info text-dark">Fixing: 5</span>
+                                    <span class="badge bg-secondary">Verify: 2</span>
+                                    <span class="badge bg-success">Fixed: 8</span>
+                                </td>
+                            </tr>
+                            <tr data-href="reportdetail.html">
+                                <td>5</td>
+                                <td>2024-08-06</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>TOKYO</td>
+                                <td>1st Floor</td>
+                                <td>33</td>
+                                <td>
+                                    <span class="badge bg-primary">New: 6</span>
+                                    <span class="badge bg-warning text-dark">In Review: 2</span>
+                                    <span class="badge bg-info text-dark">Fixing: 3</span>
+                                    <span class="badge bg-secondary">Verify: 4</span>
+                                    <span class="badge bg-success">Fixed: 5</span>
+                                </td>
+                            </tr>
+                            <tr data-href="reportdetail.html">
+                                <td>6</td>
+                                <td>2024-08-05</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>TOKYO</td>
+                                <td>1st Floor</td>
+                                <td>23</td>
+                                <td>
+                                    <span class="badge bg-primary">New: 5</span>
+                                    <span class="badge bg-warning text-dark">In Review: 3</span>
+                                    <span class="badge bg-info text-dark">Fixing: 7</span>
+                                    <span class="badge bg-secondary">Verify: 4</span>
+                                    <span class="badge bg-success">Fixed: 3</span>
+                                </td>
+                            </tr>
+                            <tr data-href="reportdetail.html">
+                                <td>7</td>
+                                <td>2024-08-04</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>TOKYO</td>
+                                <td>1st Floor</td>
+                                <td>48</td>
+                                <td>
+                                    <span class="badge bg-primary">New: 4</span>
+                                    <span class="badge bg-warning text-dark">In Review: 6</span>
+                                    <span class="badge bg-info text-dark">Fixing: 2</span>
+                                    <span class="badge bg-secondary">Verify: 3</span>
+                                    <span class="badge bg-success">Fixed: 5</span>
+                                </td>
+                            </tr>
+                            <tr data-href="reportdetail.html">
+                                <td>8</td>
+                                <td>2024-08-03</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>TOKYO</td>
+                                <td>1st Floor</td>
+                                <td>48</td>
+                                <td>
+                                    <span class="badge bg-primary">New: 3</span>
+                                    <span class="badge bg-warning text-dark">In Review: 4</span>
+                                    <span class="badge bg-info text-dark">Fixing: 5</span>
+                                    <span class="badge bg-secondary">Verify: 2</span>
+                                    <span class="badge bg-success">Fixed: 6</span>
+                                </td>
+                            </tr>
+                            <tr data-href="reportdetail.html">
+                                <td>9</td>
+                                <td>2024-08-02</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>TOKYO</td>
+                                <td>1st Floor</td>
+                                <td>49</td>
+                                <td>
+                                    <span class="badge bg-primary">New: 7</span>
+                                    <span class="badge bg-warning text-dark">In Review: 3</span>
+                                    <span class="badge bg-info text-dark">Fixing: 4</span>
+                                    <span class="badge bg-secondary">Verify: 2</span>
+                                    <span class="badge bg-success">Fixed: 5</span>
+                                </td>
+                            </tr>
+                            <tr data-href="reportdetail.html">
+                                <td>10</td>
+                                <td>2024-08-01</td>
+                                <td>Chris Wilson (SE)</td>
+                                <td>TOKYO</td>
+                                <td>1st Floor</td>
+                                <td>50</td>
+                                <td>
+                                    <span class="badge bg-primary">New: 6</span>
+                                    <span class="badge bg-warning text-dark">In Review: 2</span>
+                                    <span class="badge bg-info text-dark">Fixing: 3</span>
+                                    <span class="badge bg-secondary">Verify: 4</span>
+                                    <span class="badge bg-success">Fixed: 5</span>
+                                </td>
+                            </tr>
+                        </tbody>                        
+                    </table>
+                </div>
+                <!-- ページネーションの例 -->
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="table-container">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ID <button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                            <th>Report Date<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                            <th>Reported By<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                            <th>Facility<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                            <th>Location<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                            <th>Issues<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                            <th>Classify<button class="btn btn-sm btn-link">▲</button><button class="btn btn-sm btn-link">▼</button></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- サンプルデータ -->
-                        <tr data-href="reportdetail.html">
-                            <td>1</td>
-                            <td>2024-08-10</td>
-                            <td>Chris Wilson (SE)</td>
-                            <td>TOKYO</td>
-                            <td>1st Floor</td>
-                            <td>32</td>
-                            <td>
-                                <span class="badge bg-primary">New: 5</span>
-                                <span class="badge bg-warning text-dark">In Review: 3</span>
-                                <span class="badge bg-info text-dark">Fixing: 7</span>
-                                <span class="badge bg-secondary">Verify: 4</span>
-                                <span class="badge bg-success">Fixed: 3</span>
-                            </td>
-                        </tr>
-                        <tr data-href="reportdetail.html">
-                            <td>2</td>
-                            <td>2024-08-09</td>
-                            <td>Chris Wilson (SE)</td>
-                            <td>TOKYO</td>
-                            <td>1st Floor</td>
-                            <td>45</td>
-                            <td>
-                                <span class="badge bg-primary">New: 3</span>
-                                <span class="badge bg-warning text-dark">In Review: 4</span>
-                                <span class="badge bg-info text-dark">Fixing: 5</span>
-                                <span class="badge bg-secondary">Verify: 2</span>
-                                <span class="badge bg-success">Fixed: 6</span>
-                            </td>
-                        </tr>
-                        <tr data-href="reportdetail.html">
-                            <td>3</td>
-                            <td>2024-08-08</td>
-                            <td>Chris Wilson (SE)</td>
-                            <td>TOKYO</td>
-                            <td>1st Floor</td>
-                            <td>47</td>
-                            <td>
-                                <span class="badge bg-primary">New: 2</span>
-                                <span class="badge bg-warning text-dark">In Review: 5</span>
-                                <span class="badge bg-info text-dark">Fixing: 4</span>
-                                <span class="badge bg-secondary">Verify: 3</span>
-                                <span class="badge bg-success">Fixed: 7</span>
-                            </td>
-                        </tr>
-                        <tr data-href="reportdetail.html">
-                            <td>4</td>
-                            <td>2024-08-07</td>
-                            <td>Chris Wilson (SE)</td>
-                            <td>TOKYO</td>
-                            <td>1st Floor</td>
-                            <td>50</td>
-                            <td>
-                                <span class="badge bg-primary">New: 4</span>
-                                <span class="badge bg-warning text-dark">In Review: 3</span>
-                                <span class="badge bg-info text-dark">Fixing: 5</span>
-                                <span class="badge bg-secondary">Verify: 2</span>
-                                <span class="badge bg-success">Fixed: 8</span>
-                            </td>
-                        </tr>
-                        <tr data-href="reportdetail.html">
-                            <td>5</td>
-                            <td>2024-08-06</td>
-                            <td>Chris Wilson (SE)</td>
-                            <td>TOKYO</td>
-                            <td>1st Floor</td>
-                            <td>33</td>
-                            <td>
-                                <span class="badge bg-primary">New: 6</span>
-                                <span class="badge bg-warning text-dark">In Review: 2</span>
-                                <span class="badge bg-info text-dark">Fixing: 3</span>
-                                <span class="badge bg-secondary">Verify: 4</span>
-                                <span class="badge bg-success">Fixed: 5</span>
-                            </td>
-                        </tr>
-                        <tr data-href="reportdetail.html">
-                            <td>6</td>
-                            <td>2024-08-05</td>
-                            <td>Chris Wilson (SE)</td>
-                            <td>TOKYO</td>
-                            <td>1st Floor</td>
-                            <td>23</td>
-                            <td>
-                                <span class="badge bg-primary">New: 5</span>
-                                <span class="badge bg-warning text-dark">In Review: 3</span>
-                                <span class="badge bg-info text-dark">Fixing: 7</span>
-                                <span class="badge bg-secondary">Verify: 4</span>
-                                <span class="badge bg-success">Fixed: 3</span>
-                            </td>
-                        </tr>
-                        <tr data-href="reportdetail.html">
-                            <td>7</td>
-                            <td>2024-08-04</td>
-                            <td>Chris Wilson (SE)</td>
-                            <td>TOKYO</td>
-                            <td>1st Floor</td>
-                            <td>48</td>
-                            <td>
-                                <span class="badge bg-primary">New: 4</span>
-                                <span class="badge bg-warning text-dark">In Review: 6</span>
-                                <span class="badge bg-info text-dark">Fixing: 2</span>
-                                <span class="badge bg-secondary">Verify: 3</span>
-                                <span class="badge bg-success">Fixed: 5</span>
-                            </td>
-                        </tr>
-                        <tr data-href="reportdetail.html">
-                            <td>8</td>
-                            <td>2024-08-03</td>
-                            <td>Chris Wilson (SE)</td>
-                            <td>TOKYO</td>
-                            <td>1st Floor</td>
-                            <td>48</td>
-                            <td>
-                                <span class="badge bg-primary">New: 3</span>
-                                <span class="badge bg-warning text-dark">In Review: 4</span>
-                                <span class="badge bg-info text-dark">Fixing: 5</span>
-                                <span class="badge bg-secondary">Verify: 2</span>
-                                <span class="badge bg-success">Fixed: 6</span>
-                            </td>
-                        </tr>
-                        <tr data-href="reportdetail.html">
-                            <td>9</td>
-                            <td>2024-08-02</td>
-                            <td>Chris Wilson (SE)</td>
-                            <td>TOKYO</td>
-                            <td>1st Floor</td>
-                            <td>49</td>
-                            <td>
-                                <span class="badge bg-primary">New: 7</span>
-                                <span class="badge bg-warning text-dark">In Review: 3</span>
-                                <span class="badge bg-info text-dark">Fixing: 4</span>
-                                <span class="badge bg-secondary">Verify: 2</span>
-                                <span class="badge bg-success">Fixed: 5</span>
-                            </td>
-                        </tr>
-                        <tr data-href="reportdetail.html">
-                            <td>10</td>
-                            <td>2024-08-01</td>
-                            <td>Chris Wilson (SE)</td>
-                            <td>TOKYO</td>
-                            <td>1st Floor</td>
-                            <td>50</td>
-                            <td>
-                                <span class="badge bg-primary">New: 6</span>
-                                <span class="badge bg-warning text-dark">In Review: 2</span>
-                                <span class="badge bg-info text-dark">Fixing: 3</span>
-                                <span class="badge bg-secondary">Verify: 4</span>
-                                <span class="badge bg-success">Fixed: 5</span>
-                            </td>
-                        </tr>
-                    </tbody>                        
-                </table>
-            </div>
-            <!-- ページネーションの例 -->
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-            </nav>
         </div>
     </div>
-
     <!-- Include Footer -->
     <div include-html="footer.html"></div>
 
